@@ -1,0 +1,103 @@
+<Programa>:
+    orientation: "vertical"
+    
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'nublado.jpg'
+
+    ActionBar:
+        pos_hint: {'top':1}
+        background_color: 1, 1, 1, 0
+            
+        ActionView:
+            ActionPrevious:
+                title: "ClimaX - Feira de Santana"
+                app_icon: ''
+                with_previous: False
+
+    
+    GridLayout:
+        id: "primeiro"
+        cols: 2
+
+        Label:
+            id: "dia"
+            text: str(root.diaum)
+
+        Label:
+            id: "data"
+            text: root.dataum
+
+        Label:
+            id: "graus"
+            text: "10"
+
+        Label:
+            id: "desc"
+            text: str(root.descum)
+
+    GridLayout:
+        id: "segundo"
+        cols: 2
+
+        Label:
+            id: "dia"
+            text: "dia"
+
+        Label:
+            id: "data"
+            text: "data"
+
+        Label:
+            id: "graus"
+            text: "1"
+
+        Label:
+            id: "desc"
+            text: "descriçao"
+
+        GridLayout:
+            id: "terceiro"
+            cols: 2
+
+            Label:
+                id: "dia"
+                text: "dia"
+
+            Label:
+                id: "data"
+                text: "data"
+
+            Label:
+                id: "graus"
+                text: "2"
+
+            Label:
+                id: "desc"
+                text: "descriçao"
+
+        GridLayout:
+            id: "quarto"
+            cols: 2
+
+            Label:
+                id: "dia"
+                text: "dia"
+
+            Label:
+                id: "data"
+                text: "data"
+
+            Label:
+                id: "graus"
+                text: "3"
+
+            Label:
+                id: "desc"
+                text: "descriçao"
+
+
+    
