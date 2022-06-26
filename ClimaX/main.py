@@ -23,36 +23,55 @@ import requests
 
 
 
-
-
-
+#PARA DATA#
 link = "https://api.hgbrasil.com/weather?woeid=455860"
 
 resposta = requests.get(link)
 conteudo = resposta.json()
 
+
 '''
-1 dia
+IMAGES:
+
+nublado.jpg
+ensolarado.jpg
+chuva.jpg
+trovoada.jpg
 '''
 
-data = conteudo["results"]["date"] # DATA
-temp = conteudo["results"]["temp"] #temperatura
+hora = conteudo["results"]["time"]
 dia = conteudo["results"]["forecast"][0]["weekday"]
+data = conteudo["results"]["date"] # DATA
 descriçao = conteudo["results"]["forecast"][0]["description"]
+condi = conteudo["results"]["condition_slug"]
+temp = conteudo["results"]["temp"]  #temperatura
+maxi = conteudo["results"]["forecast"][0]["max"]
+mini = conteudo["results"]["forecast"][0]["min"]
 
-
-dia2 = conteudo["results"]["forecast"][0]["date"]["date"]
-
-print(dia2)
-
-
+#temperatura = str(temp + "C")
 
 class Programa(BoxLayout):
     tempum = temp
-    diaum = dia
+    maxum = maxi
+    minum = mini
+    condium = condi
+    horaum = hora
+    diaum = dia + ","
+    desc = descriçao
     dataum = data
-    descum = descriçao
 
+    if condium == "cloud":
+        fundo = "nublado.jpg"
+
+    elif condium == "rain":
+        fundo = "chuva.jpg"
+
+    else:
+        fundo = "ensolarado.jpg"
+        
+    
+
+    
 
 class ClimaX(App):
     def build(self):
@@ -60,4 +79,5 @@ class ClimaX(App):
 
 
 ClimaX().run()
+
 

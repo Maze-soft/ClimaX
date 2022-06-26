@@ -6,7 +6,7 @@
         Rectangle:
             pos: self.pos
             size: self.size
-            source: 'nublado.jpg'
+            source: (root.fundo)
 
     ActionBar:
         pos_hint: {'top':1}
@@ -24,80 +24,66 @@
         cols: 2
 
         Label:
-            id: "dia"
+            id: "diaum"
             text: str(root.diaum)
+            font_size: 65
+            bold: True
 
         Label:
-            id: "data"
-            text: root.dataum
+            id: "horaum"
+            text: (root.horaum)
+            bold: True
+            font_size: 20
 
         Label:
-            id: "graus"
-            text: "10"
+            id: "dataum"
+            text: (root.dataum)
+            bold: True
+            font_size: 25
+            pos_hint: {"top": .7}
+
+        Label:
+            id: "tempum"
+            text: str(root.tempum) + " °C"
+            bold: True
+            font_size: 40
 
         Label:
             id: "desc"
-            text: str(root.descum)
+            text: str(root.desc)
+            bold: True
+
+        Label:
+            id: "con"
+            text: "Condi: " + str(root.condium)
+            bold: True
 
     GridLayout:
-        id: "segundo"
+        id: "seg"
         cols: 2
 
         Label:
-            id: "dia"
-            text: "dia"
+            text: "Max: " + str(root.maxum) + " °C"
+            bold: True
+            font_size: 20
 
         Label:
-            id: "data"
-            text: "data"
+            text:"Min: " + str(root.minum) + " °C"
+            bold: True
+            font_size: 20
+
+    GridLayout:
+        cols: 1
 
         Label:
-            id: "graus"
-            text: "1"
+            text: ""
+
+    GridLayout:
+        cols: 1
 
         Label:
-            id: "desc"
-            text: "descriçao"
-
-        GridLayout:
-            id: "terceiro"
-            cols: 2
-
-            Label:
-                id: "dia"
-                text: "dia"
-
-            Label:
-                id: "data"
-                text: "data"
-
-            Label:
-                id: "graus"
-                text: "2"
-
-            Label:
-                id: "desc"
-                text: "descriçao"
-
-        GridLayout:
-            id: "quarto"
-            cols: 2
-
-            Label:
-                id: "dia"
-                text: "dia"
-
-            Label:
-                id: "data"
-                text: "data"
-
-            Label:
-                id: "graus"
-                text: "3"
-
-            Label:
-                id: "desc"
-                text: "descriçao"
-
+            text: "Maze technologies Inc."
+            bold: True
+            font_size: 22
 
     
