@@ -18,5 +18,5 @@ Depois de baixado , abrirá a seguinte tela
 - Tanto o quinto e a sexta é o de descrição do dia
 - E o setimo e o oitavo representam a maxima e minima diaria
 
-***VALE LEMBRAR QUE O BACKGROUND SE ALTERA DE ACORDO COM A DESCRIÇÃO***
+***VALE LEMBRAR QUE O BACKGROUND SE ALTERA DE ACORDO COM A DESCRIÇÃO***  
 ***O APP SE ATUALIZA A CADA 1 HORA***
